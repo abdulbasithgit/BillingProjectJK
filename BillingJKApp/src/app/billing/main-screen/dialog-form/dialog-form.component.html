@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Add Products Form</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addFrom" novalidate>
+     <div>
+        <mat-form-field>
+            <input matInput placeholder="Product Name" formControlName="productName">
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Product code" formControlName="productCode">
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Price" formControlName="price">
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Category Code" formControlName="categoryCode">
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Quantity" formControlName="quantity">
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Discont" formControlName="discont">
+        </mat-form-field> 
+    </div>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button [mat-dialog-close]="data.animal" mat-raised-button class="right" color="primary" [disabled]="!addFrom.valid">Add</button>
+</div>

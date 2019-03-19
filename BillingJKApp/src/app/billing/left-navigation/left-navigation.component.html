@@ -1,0 +1,21 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+    <ul class="left-nav-list">
+      <li>
+          <a href="javascript:void(0)">New Invoice</a>
+      </li>
+      <li>
+          Add Category
+          <ul class="sub-list">
+              <li><a routerLink="/home">Mobile</a></li>
+              <li><a href="javascript:void(0)">Mobile Accessories</a></li>
+          </ul>
+      </li>
+      <li>
+          <a href="javascript:void(0)">Bills</a>
+      </li>
+    </ul>    
+  </mat-drawer>
+</mat-drawer-container> 
+
+<button type="button" mat-button class="toggle-btn" (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
